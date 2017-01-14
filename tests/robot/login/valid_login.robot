@@ -14,9 +14,9 @@ ${EMAIL}=  efrain70@gmail.com
 ${PASSWORD}=  Mypass
 ${BROWSER}=  Firefox
 
-*** Test Cases ***                     USERLOGIN      PASSWORD     NICK
-Test Normal Login                      ${USERNAME}    ${PASSWORD}  ${USERNAME}
-Test Login with email                  ${EMAIL}       ${PASSWORD}  ${USERNAME}
+*** Test Cases ***       USERLOGIN      PASSWORD     NICK
+Test Normal Login        ${USERNAME}    ${PASSWORD}  ${USERNAME}
+Test Login with email    ${EMAIL}       ${PASSWORD}  ${USERNAME}
 
 *** Keywords ***
 Open Browser in Login Page
