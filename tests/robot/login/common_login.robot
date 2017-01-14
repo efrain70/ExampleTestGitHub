@@ -1,6 +1,11 @@
 *** Settings ***
 Documentation    Suite description
 
+*** Variables ***
+${USERNAME}=  efrain70
+${EMAIL}=  efrain70@gmail.com
+${PASSWORD}=  Mypass
+
 *** Keywords ***
 Insert Username
     [Documentation]  Introduce a given username in the login form
