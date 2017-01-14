@@ -10,7 +10,6 @@ Test Template    Verify Login with valid Credentials
 ${USERNAME}=  efrain70
 ${EMAIL}=  efrain70@gmail.com
 ${PASSWORD}=  Mypass
-${BROWSER}=  Firefox
 
 *** Test Cases ***       USERLOGIN      PASSWORD     NICK
 Test Normal Login        ${USERNAME}    ${PASSWORD}  ${USERNAME}
