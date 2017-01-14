@@ -1,6 +1,7 @@
 *** Settings ***
 Documentation    Testing valid login in Github with Email and username
 Library          Selenium2Library
+Resource         ./common_login.robot
 
 Test Teardown    Logout in Page and Go to Login
 
@@ -25,20 +26,6 @@ Verify Login with valid Credentials
     Insert password  ${password}
     Submit Login form
     User Should be Logged As  ${nick}
-
-Insert Username
-    [Documentation]  Introduce a given username in the login form
-    [Arguments]  ${username}
-    Input Text  id=login_field  ${username}
-
-Insert Password
-    [Documentation]  Introduce a given password in the login form
-    [Arguments]  ${password}
-    Input Password  id=password  ${password}
-
-Submit Login form
-    [Documentation]  Submit the login form
-    Submit Form  css=#login > form
 
 User Should be Logged As
     [Documentation]  Verify the user is logged with a given nick
