@@ -9,6 +9,9 @@ Test Teardown    Logout in Page and Go to Login
 Test Template    Verify Login with valid Credentials
 
 *** Variables ***
+${USER MENU ELEMENT}=  css=.name > .dropdown-caret
+${AVATAR ELEMENT}=  css=.avatar
+${LOGOUT FORM}=  css=.logout-form
 
 *** Test Cases ***       USERLOGIN      PASSWORD     NICK
 Test Normal Login        ${USERNAME}    ${PASSWORD}  ${USERNAME}
@@ -35,11 +38,11 @@ User Should be Logged As
 Logout in Page and Go to Login
     [Documentation]  Logout the user and go to login page
     Open User Menu
-    Submit form    css=.logout-form
-    Wait Until Page Does Not Contain Element  css=.avatar
+    Submit form    ${LOGOUT FORM}
+    Wait Until Page Does Not Contain Element  ${AVATAR ELEMENT}
     Go To   https://github.com/login
 
 Open User Menu
     [Documentation]  Open the user menu (dropdown)
     Wait until element is enabled  id=user-links
-    Click Element  css=.name > .dropdown-caret
+    Click Element  ${USER MENU ELEMENT}
