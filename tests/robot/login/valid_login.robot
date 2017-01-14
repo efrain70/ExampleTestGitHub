@@ -2,6 +2,7 @@
 Documentation    Testing valid login in Github with Email and username
 Library          Selenium2Library
 Resource         ./common_login.robot
+Default Tags     valid
 
 Test Teardown    Logout in Page and Go to Login
 
