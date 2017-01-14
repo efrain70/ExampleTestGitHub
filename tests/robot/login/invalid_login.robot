@@ -23,8 +23,8 @@ Test Password + Space     ${USERNAME}          ${PASSWORD}${SPACE}
 *** Keywords ***
 
 Verify login with invalid Credentials
-    [Documentation]  Verify the login process with a
-    ...  given usernane, password and nick
+    [Documentation]  Verify the login process fail with a
+    ...  given usernane, password
     [Arguments]  ${username}  ${password}
     Insert Username  ${username}
     Insert password  ${password}
@@ -33,8 +33,10 @@ Verify login with invalid Credentials
 
 
 Login Error Should be Displayed
+    [Documentation]  Verify an login error message is shown
     Wait Until Element Is Visible  ${MESSAGE ELEMENT}
     Element Should Contain  ${MESSAGE ELEMENT}  ${LOGIN ERROR}
 
 Go to login again
+    [Documentation]  Force to go to login page
     Go To   https://github.com/login
