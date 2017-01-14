@@ -8,9 +8,6 @@ Test Teardown    Logout in Page and Go to Login
 Test Template    Verify Login with valid Credentials
 
 *** Variables ***
-${USERNAME}=  efrain70
-${EMAIL}=  efrain70@gmail.com
-${PASSWORD}=  Mypass
 
 *** Test Cases ***       USERLOGIN      PASSWORD     NICK
 Test Normal Login        ${USERNAME}    ${PASSWORD}  ${USERNAME}
