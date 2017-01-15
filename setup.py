@@ -30,6 +30,7 @@ setup(
     packages=find_packages(),
 
     install_requires=[
+        'pytest',
         'robotframework-selenium2library'
     ],
 )
