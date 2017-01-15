@@ -1,5 +1,6 @@
 *** Settings ***
 Documentation    Suite description
+Library          Selenium2Library
 
 *** Variables ***
 ${USERNAME}=  efrain70
