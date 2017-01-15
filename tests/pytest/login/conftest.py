@@ -19,4 +19,3 @@ def browser(request):
 
     request.addfinalizer(close_quit)
     return driver
-
